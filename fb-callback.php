@@ -6,9 +6,12 @@
 <?php
  require_once __DIR__ . '/vendor/autoload.php';
 
+//Enable error reporting to the browser
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
+
+//THIS IS ALL COPIED FROM THE FACEBOOK API
 $fb = new Facebook\Facebook([
   'app_id' => '679596702193924', // Replace {app-id} with your app id
   'app_secret' => 'cdd86f172099af5d0f2376422ca444f6',
@@ -75,6 +78,7 @@ $_SESSION['user_id'] = (string) $user_id;
 $response = $fb->get('/me?fields=id,name', $_SESSION['fb_access_token']);
 $user_name = $response->getGraphUser()['name'];
 
+//REST IS NOT COPIED
 include 'Data.php';
 
 $user_exists = ResultQuery("SELECT * FROM `Users` WHERE `User_Id` = $user_id")->num_rows >= 1;

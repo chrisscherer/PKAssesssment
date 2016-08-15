@@ -6,6 +6,9 @@
 // // Create connection
 $conn;
 
+//The open and close connection bits weren't working as intended,
+//I was trying to pass back the open connection for use and allow the dev
+//To close it whenever they were done but the return was always null
 function OpenConnection(){
   $servername = "localhost";
   $username = "root";
@@ -54,8 +57,4 @@ function ResultQuery($query){
 function CloseConnection(){
   $conn->close();
 }
-
-function Test(){
-  echo "TEST@@@@@@@@@@@@@@@@!!!!!!!!!!";
-}
-// ?>
+?>

@@ -18,6 +18,7 @@
     <?php 
  require_once __DIR__ . '/vendor/autoload.php';
 
+//COPIED FROM FACEBOOK API
  $fb = new Facebook\Facebook([
   'app_id' => '679596702193924', // Replace {app-id} with your app id
   'app_secret' => 'cdd86f172099af5d0f2376422ca444f6',
@@ -54,7 +55,7 @@ if($_SESSION['fb_access_token']){
     echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
   }
  ?> 
-
+//NOT COPIED FROM FACEBOOK API FROM HERE ON
   <h2 style="display: inline; margin:auto; text-align:center;">Welcome to the lottery, it's totally a responsible choice!</h2>
 </div>
 

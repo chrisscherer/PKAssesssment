@@ -4,7 +4,7 @@
   if(!session_id()) {
     session_start();
   } 
-
+//COPIED FROM FACEBOOK API
 $fb = new Facebook\Facebook([
   'app_id' => '679596702193924', // Replace {app-id} with your app id
   'app_secret' => 'cdd86f172099af5d0f2376422ca444f6',

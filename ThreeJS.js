@@ -1,3 +1,5 @@
+//ALL ORIGINAL
+
 var clock = new THREE.Clock();
 var options = [], spawnerOptions = [], tick = 0;
 
